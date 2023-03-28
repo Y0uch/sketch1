@@ -1,0 +1,21 @@
+<script>
+const backgroundcolor = [{'Clear':'#CD5C5C'},'#00FA9A','#D2691E']
+
+var key = '3e3525439f6ff74bf9a6186483a1e0f3';
+   fetch('https://api.openweathermap.org/data/2.5/weather?q=' + 'illinois' + '&appid=' + key)
+    .then(function(resp) { return resp.json() }) // Convert data to json
+    .then(function(data) {
+      console.log(data.weather[0].main);
+      if (data.weather[0].main === 'Clear'){
+        document.getElementsByTagName('body')[0].style = 'background-color:'+ backgroundcolor[0].Clear;
+      }
+    else if (data){
+        document.getElementsByTagName('body')[0].style = 'background-color:'+ backgroundcolor[0].Clear;
+    }
+    })
+    .catch(function() {
+      // catch any errors
+    });
+
+
+</script>
