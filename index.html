@@ -1,5 +1,20 @@
+<style>
+  /* so we can use ／ and ＼ */
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
+  
+  body {
+    background-color: #0082c8;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 30px;
+    word-wrap: anywhere;
+    font-family: "Noto Serif SC";
+  }
+</style>
+
+
 <body>
-hello im sad as fycj
+zpooomeisdgasdg
 </body>
 
 <script>
@@ -23,5 +38,25 @@ var key = '3e3525439f6ff74bf9a6186483a1e0f3';
       // catch any errors
     });
 
+  
+  
+   
+  function draw () {
+    requestAnimationFrame(draw)
+    let ran = Math.random()
+    if (ran > 0.7) {
+      document.body.innerText += '／' 
+    } else if (ran < 12 )
+    	document.body.innerText += '＼'
+    
+    
+    
+    
+    document.body.scrollTop = document.body.scrollHeight
+  }
+
+	window.addEventListener('load', //draw)
+
+  // draw()
 
 </script>
